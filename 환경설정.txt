@@ -1,0 +1,44 @@
+https://github.com/jx007s/tj_2026_11_flutter
+
+
+
+https://developer.android.com/studio/install?hl=ko
+1. 안드로이드 스튜디오 설치
+   애뮬레이터 sdk 36 버전(android 16버전) 설치
+   애뮬레이터 정상 확인-새 프로젝트 설치 후 확인
+    - 필요에 따라 cpu 가상화 확인 필요
+      - 작업관리자 - 성능 - cpu에서 확인
+
+
+https://flutter.dev/
+https://docs.flutter.dev/install/with-vs-code?_gl=1%2Amej1wd%2A_up%2AMQ..%2A_ga%2ANzg5NTcwMjY4LjE3OTQ2MzA4Nzg.%2A_ga_04YGWK0175%2AczE3OTQ2MzA4NzckbzEkZzAkdDE3OTQ2MzA4NzckajYwJGwwJGgw
+2.  git 설치
+
+
+https://code.visualstudio.com/
+3. vscode 설치
+    확장 팩 열고 flutter 설치
+    프로젝트 생성 : ctrl + shift +p
+     Flutter: New Project flutter 
+        - flutter sdk 설치 -위치 : c(d):\dev\flutter\  권장
+        - SDK를 PATH에 추가
+        - 프로젝트 생성 위치 : 본인이름폴더\firstprj
+            - 프로젝트 이름 : aaa , 플랫폼 : 6개 모두 체크후 확인
+        - 터미널 열고 상태 확인
+           flutter doctor
+
+      Android toolchain - develop for Android devices 에러발생
+          flutter doctor --android-licenses
+
+          flutter doctor --android-licenses  실행할때 
+             Android sdkmanager not found. 에러 발생시
+               안드로이드 스튜디오 
+               File > setteings > languages & Frameworks > 
+                      Android SDK > SDK Tools > Android SDK Command-line Tools(latest) 체크
+
+    애플리케이션 실행
+    aaa >  lib  > main.dart
+    실행 및 디버그 ->  Dart & Flutter 로 실행
+    
+ 
+
