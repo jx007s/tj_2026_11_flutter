@@ -1,4 +1,39 @@
 void main() {
+  print("1. 1항연산자 ============");
+  int x = 3;
+  print("-${x} : ${-x}"); // 음수처리
+  x = x + 1;
+  print("x = x + 1 : ${x}");
+  x++; //  x = x + 1;  와 같은 의미  후치연산
+  print("x++ : ${x}");
+  x--; //  x = x - 1;  와 같은 의미
+  print("x-- : ${x}");
+  // x**;
+  // x//;
+  // x%%;
+  ++x; //전치연산
+  print("++x : ${x}");
+  --x;
+  print("--x : ${x}");
+  print("x : ${x}");
+  print("x++ : ${x++}");
+  print("x : ${x}");
+  print("++x : ${++x}");
+  print("x : ${x}");
+
+  int aa = 5, bb = 6, cc = 10, dd;
+
+  dd = aa++ + ++cc - bb-- * --aa + aa++;
+  /*
+        5   +   11 -  6  *   5   +  5
+        5   +   11  -   30    +  5
+  aa    6                    5      6
+  cc            11
+  bb                 5
+   */
+
+  print("$aa, $bb, $cc, $dd");
+
   print("2.1 산술연산자 ============");
   // 항   : 숫자,  문자(더하기만 가능)
   // 결과 : 숫자,  문자
@@ -77,19 +112,51 @@ void main() {
   print("$a2 || $b2 : ${a2 || b2}"); //or - 1개 항이라도 true : true
   print("!$a2 : ${!a2}"); // not - 1항 연산자 , 항을 부정
 
-  int age = 22;
-  String color = "빨강";
+  int age = 52;
+  String color = "검정";
 
-  bool ageChk = age <= 30;
-  bool ccChk = color == "빨강";
+  // bool ageChk = age <= 30;
+  // bool ccChk = color == "빨강";
+  // print("and : ${ageChk && ccChk}");
+  // print("or : ${ageChk || ccChk}");
 
-  print("and : ${ageChk && ccChk}");
-  print("or : ${ageChk || ccChk}");
+  print("and : ${age <= 30 && color == "빨강"}");
+  print("or  : ${age <= 30 + 30 || color == "빨강"}");
+
+  print("2.4 대입할당연산자 ============");
+  // 항   : 숫자, 문자, bool
+  // 결과 : 숫자, 문자, bool
+
+  x = 3;
+  print("x : $x");
+  x = x + 5;
+  print("x = x + 5 : ${x}");
+  x += 5; //x = x + 5;
+  print("x += 5 : ${x}");
+  x -= 2;
+  print("x -= 2 : ${x}");
+  x *= 3;
+  print("x *= 3 : ${x}");
+  x ~/= 4;
+  print("x ~/= 4 : ${x}");
+  x %= 5;
+  print("x %= 5 : ${x}");
+
+  print("3 조건 연산자 ============");
+  // 항   : bool, 참일때값, 거짓일때값
+  // 리턴 : 참일때값, 거짓일때값
+
+  print(true ? "참이지롱1" : "거짓부렁1"); // 1항 true - 2항 리턴
+  print(false ? "참이지롱2" : "거짓부렁2"); // 1항 false - 3항 리턴
 
   /*
   우선순위
   ()
+  ++ -- !
   * / ~/ %
   + -
+  >, >=, <,<=, ==, !=
+  &&, ||
+  = += -= *= /= ~/= %=
    */
 }
