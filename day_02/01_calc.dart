@@ -54,7 +54,7 @@ void main() {
 
   bool a2 = true, b2 = false;
 
-// bool 크기비교불가
+  // bool 크기비교불가
   // print("$a2 >  $b2 : ${a2 > b2}"); //초과
   // print("$a2 >= $b2 : ${a2 >= b2}"); //이상
   // print("$a2 <= $b2 : ${a2 <= b2}"); //이하
@@ -62,11 +62,30 @@ void main() {
   print("$a2 == $b2 : ${a2 == b2}"); //같다
   print("$a2 != $b2 : ${a2 != b2}"); //다르다
 
-
   // 다른자료형 같다,다르다 비교 가능
   print("$a == $b1 : ${a == b1}"); //같다
   print("$a == $b2 : ${a == b2}"); //같다
   print("$a1 == $b2 : ${a1 == b2}"); //같다
+
+  print("2.3 논리연산자 ============");
+  // 항   : bool
+  // 결과 : bool(true,false)
+
+  a2 = false;
+  b2 = false;
+  print("$a2 && $b2 : ${a2 && b2}"); //and - 2개 항이 모두 true : true
+  print("$a2 || $b2 : ${a2 || b2}"); //or - 1개 항이라도 true : true
+  print("!$a2 : ${!a2}"); // not - 1항 연산자 , 항을 부정
+
+  int age = 22;
+  String color = "빨강";
+
+  bool ageChk = age <= 30;
+  bool ccChk = color == "빨강";
+
+  print("and : ${ageChk && ccChk}");
+  print("or : ${ageChk || ccChk}");
+
   /*
   우선순위
   ()
