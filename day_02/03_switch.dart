@@ -36,4 +36,19 @@ void main() {
 
   // 기본급 : 300, 직급 : 과장
   //  월급 : 300 + 300*30%  => 390
+  int basic = 300;
+  String zg = "과장";
+  double bonus = 0;
+  switch (zg) {
+    case "부장":
+      bonus = 0.5;
+    case "과장":
+      bonus = 0.3;
+    case "대리":
+      bonus = 0.2;
+    case "사원":
+      bonus = 0.1;
+  }
+  double money = basic + basic * bonus;
+  print("$basic , $zg , $money");
 }
